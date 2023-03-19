@@ -212,3 +212,34 @@ ul.list-with-icon li {
 ul.list-with-icon li img {
     margin-right: 8px;
 }
+
+.in-text-link {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 0.8rem;
+    }
+    .section-title h2,
+    .section-title i {
+        font-size: 2rem;
+    }
+    .social-links {
+        font-size: 2.4rem;
+    }
+    .menu>div {
+        font-size: 1.4rem;
+    }
+    .menu>div:hover .arrow {
+        display: none;
+    }
+    .main-col section {
+        margin-left: 20px;
+    }
+    ul.list-with-icon li {
+        font-size: 2.1rem;
+        line-height: 2.1rem;
+        margin: 24px 0;
+    }
+}
