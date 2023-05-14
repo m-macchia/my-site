@@ -203,14 +203,8 @@ a {
     box-shadow: #3C6E71 1.95px 1.95px 2.6px;
 }
 
-ul.list-with-icon li {
-    display: flex;
-    align-items: center;
-    line-height: 1.8rem;
-}
-
-ul.list-with-icon li img {
-    margin-right: 8px;
+ul.certification-list-ms {
+    list-style-image: url("../img/microsoft-16.png");
 }
 
 .in-text-link {
@@ -236,10 +230,5 @@ ul.list-with-icon li img {
     }
     .main-col section {
         margin-left: 20px;
-    }
-    ul.list-with-icon li {
-        font-size: 2.1rem;
-        line-height: 2.1rem;
-        margin: 24px 0;
     }
 }
