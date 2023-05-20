@@ -16,18 +16,33 @@
 
 <body>
     <header class="mobile-sticky-header">
-        <div class="">
-            <img class="profile-picture" src="./img/fotomax.jpg" width="128" />
-        </div>
-        <nav class="main-menu">
-            <div><a href="#whoami">WHOAMI <span class="arrow">→</span></a></div>
-            <div><a href="#goals">Goals <span class="arrow">→</span></a></div>
-            <div><a href="#work">Working on <span class="arrow">→</span></a></div>
-            <div><a href="#skills">Tech Skills <span class="arrow">→</span></a></div>
-            <div><a href="#exp">Experience <span class="arrow">→</span></a></div>
-            <div><a href="#cert">Certifications <span class="arrow">→</span></a></div>
-            <div><a href="#edu">Education <span class="arrow">→</span></a></div>
+        <nav role="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" name="closeMenu" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <li class="closeMenuOnClick"><a href="#whoami">WHOAMI </a></li>
+                    <li class="closeMenuOnClick"><a href="#goals">Goals </a></li>
+                    <li class="closeMenuOnClick"><a href="#work">Working on </a></li>
+                    <li class="closeMenuOnClick"><a href="#skills">Tech Skills </a></li>
+                    <li class="closeMenuOnClick"><a href="#exp">Experience </a></li>
+                    <li class="closeMenuOnClick"><a href="#cert">Certifications </a></li>
+                    <li class="closeMenuOnClick"><a href="#edu">Education </a></li>
+                </ul>
+            </div>
         </nav>
+        <div class="social-links">
+            <a href="https://it.linkedin.com/in/massimiliano-macchia-4b156943" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/m-macchia" target="_blank"><i class="fab fa-github-square"></i></a>
+            <!-- <a href="#"><i class="fab fa-medium"></i></a> -->
+            <!-- <a href="#"><i class="fab fa-blogger"></i></a> -->
+            <a href="https://www.instagram.com/mac82.sweng/"><i class="fab fa-instagram-square"></i></a>
+            <!-- <a href="#"><i class="fab fa-youtube-square"></i></a> -->
+            <a href="mailto:massimiliano.macchia@gmail.it"><i class="fas fa-envelope-square"></i></a>
+        </div>
+        <!-- <img class="profile-picture" src="./img/fotomax.jpg" width="64" /> -->
     </header>
     <div class="page-container">
         <main class="main-col">
@@ -217,6 +232,20 @@
 </body>
 
 <script>
+    function closeMenu() {
+        const menuCheckbox = document.querySelector("#menuToggle input[name='closeMenu']");
+        if (menuCheckbox) {
+            menuCheckbox.checked = false;
+        }
+    }
+    window.onload = function() {
+        const links = document.querySelectorAll(".closeMenuOnClick")
+        if (links && links.length > 0) {
+            links.forEach(function(link) {
+                link.addEventListener('click', closeMenu, false);
+            })
+        }
+    }
 </script>
 
 </html>
