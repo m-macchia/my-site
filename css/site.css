@@ -12,6 +12,10 @@ body {
     padding: 0;
 }
 
+header h1 {
+    font-size: 1.5rem;
+}
+
 .row {
     display: flex;
     width: 100%;
@@ -29,7 +33,7 @@ body {
 
 .main-col {
     grid-area: mm82-main;
-    margin: 12px 36px;
+    margin: 12px;
 }
 
 .aside-col {
@@ -194,49 +198,6 @@ ul.certification-list-ms {
     width: fit-content;
 }
 
-@media screen and (max-width: 992px) {
-    body {
-        font-size: 0.8rem;
-    }
-    .section-title h2,
-    .section-title i {
-        font-size: 2rem;
-    }
-    .social-links {
-        font-size: 2.4rem;
-    }
-    .menu>div {
-        font-size: 1.4rem;
-    }
-    .menu>div:hover .arrow {
-        display: none;
-    }
-    .main-col section {
-        margin-left: 20px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .mobile-sticky-header {
-        display: none;
-    }
-    .page-container {
-        display: grid;
-        grid-template-columns: [mm82-main] 1fr [mm82-aside] 250px;
-        margin-right: 50px;
-    }
-    .aside-col {
-        grid-area: mm82-aside;
-        background-color: var(--secondary);
-        height: calc(100vh - 16px);
-        position: sticky;
-        top: 8px;
-        display: flex;
-        flex-direction: column;
-        min-height: 552px;
-    }
-}
-
 
 /* menu mobile */
 
@@ -343,3 +304,52 @@ nav {
 
 
 /* END: manage hash navigation with sticky header */
+
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 1.1rem;
+    }
+    /* .section-title h2,
+    .section-title i {
+        font-size: 1.6rem;
+    } */
+    /* .social-links {
+        font-size: 2.4rem;
+    }
+    .menu>div {
+        font-size: 1.4rem;
+    } */
+    .menu>div:hover .arrow {
+        display: none;
+    }
+    /* .main-col section {
+        margin-left: 20px;
+    } */
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-sticky-header {
+        display: none;
+    }
+    .page-container {
+        display: grid;
+        grid-template-columns: [mm82-main] 1fr [mm82-aside] 250px;
+        margin-right: 50px;
+    }
+    .aside-col {
+        grid-area: mm82-aside;
+        background-color: var(--secondary);
+        height: calc(100vh - 16px);
+        position: sticky;
+        top: 8px;
+        display: flex;
+        flex-direction: column;
+        min-height: 552px;
+    }
+    .main-col .section-title-ref {
+        top: -10px;
+    }
+    .main-col {
+        margin-left: 36px;
+    }
+}
