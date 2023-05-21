@@ -10,6 +10,7 @@ body {
     font-family: 'Space Mono', 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
+    font-size: 1.1rem;
 }
 
 header h1 {
@@ -155,20 +156,6 @@ a {
     padding-bottom: 8px;
 }
 
-.card-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-column-gap: 12px;
-    grid-row-gap: 12px;
-}
-
-.card {
-    min-height: 75px;
-    padding: 4px 8px;
-    background-color: #2A324B;
-    box-shadow: #3C6E71 1.95px 1.95px 2.6px;
-}
-
 ul.certification-list-ms {
     list-style-image: url("../img/microsoft-16.png");
 }
@@ -176,6 +163,9 @@ ul.certification-list-ms {
 .in-text-link {
     text-decoration: underline;
 }
+
+
+/* BEGIN: menu mobile */
 
 .mobile-sticky-header {
     position: sticky;
@@ -197,9 +187,6 @@ ul.certification-list-ms {
     margin: 0 16px 0 auto;
     width: fit-content;
 }
-
-
-/* menu mobile */
 
 .mobile-sticky-header ul {
     padding: 0;
@@ -292,6 +279,9 @@ nav {
 }
 
 
+/* END: menu mobile */
+
+
 /* BEGIN: manage hash navigation with sticky header */
 
 .main-col .section-title-ref {
@@ -304,10 +294,6 @@ nav {
 
 
 /* END: manage hash navigation with sticky header */
-
-body {
-    font-size: 1.1rem;
-}
 
 .menu>div:hover .arrow {
     display: none;
@@ -330,7 +316,10 @@ body {
         top: 8px;
         display: flex;
         flex-direction: column;
-        min-height: 552px;
+        /* min-height: 552px; */
+        overflow-y: auto;
+        /* For Firefox */
+        scrollbar-width: thin;
     }
     .main-col .section-title-ref {
         top: -10px;
