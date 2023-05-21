@@ -17,6 +17,9 @@
 </head>
 
 <body>
+    <div class="preloader-wrapper">
+        <div class="preloader"></div>
+    </div>
     <header class="mobile-sticky-header">
         <nav role="navigation">
             <div id="menuToggle">
@@ -230,6 +233,10 @@
             menuCheckbox.checked = false;
         }
     }
+    const fade = () => {
+        const wrapper = document.querySelector(".preloader-wrapper");
+        wrapper.classList.add("fade");
+    }
     window.onload = function() {
         const links = document.querySelectorAll(".closeMenuOnClick")
         if (links && links.length > 0) {
@@ -237,6 +244,7 @@
                 link.addEventListener('click', closeMenu, false);
             })
         }
+        fade();
     }
 </script>
 
